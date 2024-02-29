@@ -18,21 +18,21 @@ def mobile_access_denied(request):
     return render(request, 'mobile_access_denied.html')
 
 
-@login_required()
+# @login_required()
 def service_based(request):
     return render(request,'service_based.html')
-@login_required()
+# @login_required()
 def product_based(request):
     return render(request,'product_based.html')
-@login_required()
+# @login_required()
 def faang(request):
     return render(request,'faang.html')
-@login_required()
+# @login_required()
 def bigcom(request):
     return render(request,'bigcom.html')
 def indexView(request):
     return render(request,'index.html')
-@login_required()
+# @login_required()
 def dashboardView(request):
     return render(request,'dashboard.html')
 def registerView(request):
@@ -68,7 +68,7 @@ def test(request):
     return render(request, 'test.html')
 
 # compiler
-@login_required()
+# @login_required()
 def tcs(request):
     code = request.POST.get('code', '') # get code from request, default to empty string if not found
     input_data = request.POST.get('input', '') # get input data from request, default to empty string if not found
@@ -143,7 +143,7 @@ def tcs(request):
 
     return render(request, 'tcs.html', {'code': code, 'input_data': input_data, 'output': output, 'selected_theme':selected_theme, 'selected_language':selected_language, 'question': question, 'company1_list': TCS.objects.all()})
 
-@login_required()
+# @login_required()
 def mahindra(request):
     code = request.POST.get('code', '') # get code from request, default to empty string if not found
     input_data = request.POST.get('input', '') # get input data from request, default to empty string if not found
@@ -218,7 +218,7 @@ def mahindra(request):
 
     return render(request, 'tcs.html', {'code': code, 'input_data': input_data, 'output': output, 'selected_theme':selected_theme, 'selected_language':selected_language, 'question': question, 'company1_list': TCS.objects.all()})
 
-@login_required()
+# @login_required()
 def accenture(request):
     code = request.POST.get('code', '') # get code from request, default to empty string if not found
     input_data = request.POST.get('input', '') # get input data from request, default to empty string if not found
@@ -368,7 +368,7 @@ def amazon(request):
 
     return render(request, 'amazon.html', {'code': code, 'input_data': input_data, 'output': output, 'selected_theme':selected_theme, 'selected_language':selected_language, 'question': question, 'company1_list': TCS.objects.all()})
 
-@login_required()
+# @login_required()
 def capgemini(request):
     code = request.POST.get('code', '') # get code from request, default to empty string if not found
     input_data = request.POST.get('input', '') # get input data from request, default to empty string if not found
@@ -443,7 +443,7 @@ def capgemini(request):
 
     return render(request, 'capgemini.html', {'code': code, 'input_data': input_data, 'output': output, 'selected_theme':selected_theme, 'selected_language':selected_language, 'question': question, 'company1_list': TCS.objects.all()})
 
-@login_required()
+# @login_required()
 def cognizant(request):
     code = request.POST.get('code', '') # get code from request, default to empty string if not found
     input_data = request.POST.get('input', '') # get input data from request, default to empty string if not found
@@ -1343,7 +1343,7 @@ def tm(request):
 
     return render(request, 'tm.html', {'code': code, 'input_data': input_data, 'output': output, 'selected_theme':selected_theme, 'selected_language':selected_language, 'question': question, 'company1_list': TCS.objects.all()})
 
-@login_required()
+# @login_required()
 def adobe(request):
     code = request.POST.get('code', '') # get code from request, default to empty string if not found
     input_data = request.POST.get('input', '') # get input data from request, default to empty string if not found

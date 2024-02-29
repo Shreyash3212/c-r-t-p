@@ -7,6 +7,32 @@
     padding: 0;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:#222A35;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #575C66;
+    border-radius: 6px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #626970;
+  }
+
+
+
+
 /* header{
     background: var(--main-bg-color);
     font-family: 'Oswald', sans-serif;
@@ -14,16 +40,13 @@
 .p-3 {
     padding: 0rem;
     align-items: center;
-    height: 80px;
+    height: 100px;
     display: flex;
 }
-header{
-    /* position: sticky;
-    top: 0; */
-}
+
 .text-bg-dark {
     color: #fff!important;
-    background: linear-gradient(270deg, #153465 0%, #010529 100%);
+    background: #010313;
 }
 
 nav{
@@ -48,8 +71,8 @@ nav{
 }
 
 .logo img{
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 }
 .logo .hw{
     height: 0px;
@@ -101,6 +124,8 @@ nav ul li a:hover{
     border-radius: 34px;
 }
 .container{
+    width: 65%;
+    justify-content: end;
     margin-left: 2%;
     margin-right: 2%;
     display: flex;
@@ -193,7 +218,7 @@ nav ul li a:hover{
 .index-middlepart{
     display: table-row;
     justify-content: center;
-    background-color: #f5ecfa;
+    background-color: #010313;
 }
 .homeheight{
     height: 220vh;
@@ -252,6 +277,8 @@ footer{
     border-radius: 30px;
 }
 .flex-all-center{
+    background-color: #0e1026;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -452,7 +479,7 @@ footer{
     /* border-radius: 0.5em; */
     padding: 1em;
     cursor: pointer;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
 }
 .selected{
     background: none;
@@ -460,13 +487,7 @@ footer{
 .select img{
     height: 46px;
 }
-.select-clicked{
-    /* border: 2px #26489a; */
-    /* box-shadow: 0 0 0.8em #26489a; */
-}
-.select:hover {
-    /* background: #323741; */
-}
+
 .caret{
     width: 0;
     height: 0;
@@ -556,7 +577,7 @@ footer{
     /* border-radius: 0.5em; */
     padding: 1em;
     cursor: pointer;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
 }
 .que-ans .selected{
     background: none;
@@ -564,13 +585,7 @@ footer{
 .que-ans .select img{
     height: 46px;
 }
-.que-ans .select-clicked{
-    /* border: 2px #26489a; */
-    /* box-shadow: 0 0 0.8em #26489a; */
-}
-.que-ans .select:hover {
-    /* background: #323741; */
-}
+
 .que-ans .caret{
     width: 0;
     height: 0;
@@ -610,12 +625,7 @@ footer{
     border-radius: 0.5em;
     cursor: pointer;
 }
-.que-ans .menu li:hover{
-    /* background: #2a2d35; */
-}
-.que-ans .active{
-    /* background: #23242a; */
-}
+
 .que-ans .menu-open{
     display: table;
     opacity: 1;
