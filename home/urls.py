@@ -1,11 +1,11 @@
 from django.urls import path
 from home import admin
 from . import views
-from .views import mobile_access_denied
 from django.contrib.auth.views import LoginView,LogoutView
+# from .views import mobile_access_denied
 urlpatterns = [
 
-    path('mobile-access-denied/', mobile_access_denied, name='mobile_access_denied'),
+    # path('mobile-access-denied', views.mobile_access_denied, name='mobile_access_denied'),
     path('',views.indexView,name="home"),
     path('test',views.test,name="test"),
     path('dashboard',views.dashboardView,name="dashboard"),

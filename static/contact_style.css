@@ -9,9 +9,7 @@
 }
 .contact_container{
     display: table-caption;
-    margin-top: 20px;
-    margin-left: 20px;
-    height: 88vh;
+    margin: 2.5rem;
 }
 .contact_container h1{
     color: white;

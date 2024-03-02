@@ -4,19 +4,13 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime
 from home.models import Contact,Test, TCS, Accenture,Atos,Amazon,Capgemini,Coginzant,Delloite,IBM,Microsoft,Facebook,Apple,Netflix,Google,Infosys,Wipro,TM,Adobe,Cisco,EY,PWC
 from django.contrib import messages
-# imports for compiler
 from django.http import HttpResponse
 import subprocess
 import os
-# Create your views here.
-# def contactView(request):
-#     return render(request,'contact.html')
-
-
-
-def mobile_access_denied(request):
-    return render(request, 'mobile_access_denied.html')
-
+# from middleware import DesktopOnlyMiddleware;
+# def mobile_access_denied(request):
+#     message = "This website doesn't work for mobile devices. Only for laptops or PCs."
+#     return render(request, 'mobile_access_denied.html', {'message': message})
 
 # @login_required()
 def service_based(request):

@@ -35,7 +35,6 @@
       height: 440px;
     }
     .compiler_container{
-      {% comment %} display : flex; {% endcomment %}
       margin : 1%;
       width:66%;
       font-family: 'Roboto', sans-serif;
@@ -100,7 +99,6 @@
   {% endblock %}
   {% block nav %}
     <nav class="sticky">
-        {% comment %} <h1>Welcome, {{user.username}}</h1> {% endcomment %}
           <div class="logo">
             <a href="#" onclick="goBack()"><img src="../static/back.png" alt=""></a>
           </div>
@@ -128,11 +126,8 @@
     <h1>Apple Frequent Questions Types</h1>
   {% if question %}
   <div class="que-button">
-    {% comment %} {% if question_id==0 %} {% endcomment %}
     <button><a href="?question_id={{ question.id|add:1 }}">Next</a></button>
-    {% comment %} {% else %} {% endcomment %}
     <button><a href="?question_id={{ question.id|add:-1 }}">Previous</a></button>
-    {% comment %} {% endif %} {% endcomment %}
   </div>
     <div class="que-ans">
       <h3>Question Text</h3>

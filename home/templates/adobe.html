@@ -35,7 +35,6 @@
       height: 440px;
     }
     .compiler_container{
-      {% comment %} display : flex; {% endcomment %}
       margin : 1%;
       width:66%;
       font-family: 'Roboto', sans-serif;
@@ -103,25 +102,12 @@
           <div class="logo">
             <a href="../"><img src="../static/back.png" alt=""></a>
           </div>
-          {% comment %} <ul>
-            <li><a href="../dashboard">Home</a></li>
-        </ul> {% endcomment %}
-        {% comment %} <div class="dropdown">
-          <div class="select">
-              <span class="selected"><img src="../static/guest5.png" alt=""></span>
-              <div class="caret"></div>
-          </div>
-          <div class="dropdown-box">
-          <ul class="menu">
-            <li class="active"><h1>{{user.username}}</h1></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-          </ul>
-        </div> {% endcomment %}
       </div>
       </nav>
 {% endblock %}
   
 {% block content %}
+<div class="access_content">To access this content, please use Laptop or PC</div>
 <div class="whole_container">
   <div class="que_container">
     <h1>Cognizant Frequent Questions Types</h1>

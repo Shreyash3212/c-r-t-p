@@ -80,7 +80,6 @@
   {% endblock %}
   {% block nav %}
     <nav class="sticky">
-        {% comment %} <h1>Welcome, {{user.username}}</h1> {% endcomment %}
           <div class="logo">
               <img src="../static/logo.png" alt="">
           </div>
@@ -108,11 +107,8 @@
     <h1>Tech Mahindra Frequent Questions Types</h1>
   {% if question %}
   <div class="que-button">
-    {% comment %} {% if question_id==0 %} {% endcomment %}
     <button><a href="?question_id={{ question.id|add:1 }}">Next</a></button>
-    {% comment %} {% else %} {% endcomment %}
     <button><a href="?question_id={{ question.id|add:-1 }}">Previous</a></button>
-    {% comment %} {% endif %} {% endcomment %}
   </div>
     <div class="que-ans">
       <h3>Question Text</h3>

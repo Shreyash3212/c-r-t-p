@@ -1,71 +1,110 @@
-{% extends 'basic.html' %}
-{% block links %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.css">
+{% extends 'basic.html' %} {% block links %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/mode/python/python.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/dracula.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/duotone-dark.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/material-ocean.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/dracula.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/duotone-dark.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/material-ocean.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/python/python.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/mode/clike/clike.js"></script>  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/dracula.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/duotone-dark.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/material-ocean.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/abcdef.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/cobalt.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/neat.min.css">
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/mode/clike/clike.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/dracula.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/duotone-dark.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/theme/material-ocean.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/abcdef.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/cobalt.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/neat.min.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/addon/hint/show-hint.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/addon/hint/show-hint.css">
-  <style>
-    .product-thumb {
-      width: 80%;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      object-fit: cover;
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/addon/hint/show-hint.css"
+/>
+<style>
+  .product-thumb {
+    width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    object-fit: cover;
   }
-  </style>
-  {% endblock %}
-{% block nav %}
-      <nav class="sticky">
-        {% comment %} <h1>Welcome, {{user.username}}</h1> {% endcomment %}
-          <div class="logo">
-              <img src="static/logo.png" alt="">
-          </div>
-          <ul>
-            <li><a href="dashboard">Home</a></li>
-        </ul>
-          <div class="dropdown">
-            <div class="select">
-                <span class="selected"><img src="static/guest5.png" alt=""></span>
-                <div class="caret"></div>
-            </div>
-            <div class="dropdown-box">
-            <ul class="menu">
-              <li class="active"><h1>{{user.username}}</h1></li>
-              <li><a href="{% url 'logout' %}">Logout</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-{% endblock %}
-
-{% block content %}
-    <div class="dash-container">
-      <div class="dash-contain-in">
-        <a href="adobe"><img src="static/pwc.png" class="product-thumb" alt=""></a>
-      </div>
-      <div class="dash-contain-in">
-        <a href="adobe"><img src="static/deloitte.png" class="product-thumb" alt=""></a>
-      </div>
-      <div class="dash-contain-in">
-        <a href="adobe"><img src="static/ey.png" class="product-thumb" alt=""></a>
-      </div>
-      <div class="dash-contain-in">
-        <a href="adobe"><img src="static/kpmg.png" class="product-thumb" alt=""></a>
-      </div>
+</style>
+{% endblock %} {% block nav %}
+<nav class="sticky">
+  <div class="logo">
+    <a href="dashboard"><img src="static/logo.png" alt="" /></a>
+  </div>
+  <ul>
+    <li><a href="dashboard">Home</a></li>
+  </ul>
+  <div class="dropdown">
+    <div class="select">
+      <span class="selected"><img src="static/guest5.png" alt="" /></span>
+      <div class="caret"></div>
     </div>
+    <div class="dropdown-box">
+      <ul class="menu">
+        <li class="active"><h1>{{user.username}}</h1></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock %} {% block content %}
+<div class="dash-container">
+  <div class="dash-contain-in">
+    <a href="cognizant"
+      ><img src="static/pwc.png" class="product-thumb" alt=""
+    /></a>
+  </div>
+  <div class="dash-contain-in">
+    <a href="cognizant"
+      ><img src="static/deloitte.png" class="product-thumb" alt=""
+    /></a>
+  </div>
+  <div class="dash-contain-in">
+    <a href="cognizant"
+      ><img src="static/ey.png" class="product-thumb" alt=""
+    /></a>
+  </div>
+  <div class="dash-contain-in">
+    <a href="cognizant"
+      ><img src="static/kpmg.png" class="product-thumb" alt=""
+    /></a>
+  </div>
+</div>
 {% endblock %}
